@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import { navigate, Link } from '@reach/router';
+import Nav from './Nav';
 
 const ViewPet = props => {
     const [name, setName] = useState("");
@@ -30,11 +31,24 @@ const ViewPet = props => {
 
     const Delete = _id => {
         axios.delete(`http://localhost:8008/api/pets/${props._id}`)
-        navigate("/")
+        navigate("/logged_in")
     }
 
     return (
         <div className = "container">
+        <Nav />
+        <section class="hero is-info">
+            <div class="hero-body">
+                <div class="container">
+                <h1 class="title">
+                    Pet Shelter
+                </h1>
+                <h2 class="subtitle">
+                    These pets are looking for a good home
+                </h2>
+                </div>
+            </div>
+        </section>
             
         <article class="message is-success">
             <div class="message-header">

@@ -6,12 +6,26 @@ import Login from './Login';
 
 const SignInView = props => {
   return (
-    <div className="columns">
-      <div className="column">
-        <Register />
+    <div className= "container">
+      <section class="hero is-info">
+      <div class="hero-body">
+          <div class="container">
+          <h1 class="title">
+              Pet Shelter
+          </h1>
+          <h2 class="subtitle">
+              These pets are looking for a good home
+          </h2>
+          </div>
       </div>
-      <div className="column">
-        <Login />
+      </section>
+      <div className="columns">
+        <div className="column">
+          <Register />
+        </div>
+        <div className="column">
+          <Login />
+        </div>
       </div>
     </div>
   );

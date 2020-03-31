@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, navigate } from '@reach/router';
 import axios from 'axios';
+import Nav from './Nav';
 
 const CreatePet = props => {
 
@@ -21,7 +22,7 @@ const CreatePet = props => {
               setErrors(res.data.errors);
             } 
             else {
-              navigate("/");
+              navigate("/logged_in");
             }
           })
           .catch( err => console.log(err) );
@@ -29,6 +30,19 @@ const CreatePet = props => {
 
       return (
         <div className = "container">
+        <Nav />
+        <section class="hero is-info">
+            <div class="hero-body">
+                <div class="container">
+                <h1 class="title">
+                    Pet Shelter
+                </h1>
+                <h2 class="subtitle">
+                    These pets are looking for a good home
+                </h2>
+                </div>
+            </div>
+        </section>
         <form onSubmit={ addPet }>
             <article class="message is-success">
 

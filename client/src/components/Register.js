@@ -21,7 +21,7 @@ const Register = props => {
       .then( res => {
         console.log(res);
         if(res.data.loggedIn) {
-          navigate("/");
+          navigate("/logged_in");
         } else {
           setErrors(res.data.errors);
         }
@@ -31,7 +31,7 @@ const Register = props => {
   return (
     <article className="message is-dark">
       <div className="message-header">
-        <p>Register</p>
+        <p>New member? Register here!</p>
       </div>
       <div className="message-body">
         <form onSubmit={ register }>

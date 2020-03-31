@@ -17,7 +17,7 @@ const Login = props => {
       .then( res => {
         console.log(res);
         if(res.data.loggedIn) {
-          navigate("/");
+          navigate("/logged_in");
         } else {
           setErrorMessage("Invalid login attempt!");
         }
@@ -27,7 +27,7 @@ const Login = props => {
   return (
     <article className="message is-success">
       <div className="message-header">
-        <p>Login</p>
+        <p>Already a member? Login here!</p>
       </div>
       <div className="message-body">
         <form onSubmit={ login }>

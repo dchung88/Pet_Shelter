@@ -3,6 +3,7 @@ import { Link } from '@reach/router';
 
 
 const Nav = props => {
+
   return (
     <nav className="navbar is-dark">
       <div className="navbar-brand">
@@ -19,7 +20,7 @@ const Nav = props => {
         <div className="navbar-start">
         <div class="buttons">
                 <a class="button is-light">
-                    <strong><Link to ="/" >Home</Link></strong>
+                    <strong><Link to ="/logged_in" >Home</Link></strong>
                 </a>
             </div>  
         </div>
@@ -28,7 +29,7 @@ const Nav = props => {
           <div className="navbar-item">
             <div className="field is-grouped">
               <p className="control">
-                <Link className="button is-info" to="/sign_in">Sign In</Link>
+                <Link className="button is-info" to="/">Sign Out</Link>
               </p>
             </div>
           </div>
